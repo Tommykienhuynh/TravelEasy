@@ -1,14 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100&display=swap");
+
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Merriweather", serif;
+  font-family: "Montserrat", sans-serif;
 }
 nav {
   display: flex;
   flex-direction: row;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  margin-top: 10px;
+  font-weight: bold;
 }
-nav .ul {
-  list-style: none;
+
+h1 {
+  font-family: "Merriweather", serif;
 }
+
 .header {
-  height: 50vh;
+  height: 60vh;
   background: linear-gradient(#22fcd5, #94d5bb, #cbe0d2);
+  display: grid;
+  grid-template-rows: 10vh 1fr;
+  grid-template-columns: 50% 50%;
+}
+.navList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  float: right;
+}
+.navList li {
+  margin-right: 20px;
+  font-size: 25px;
+}
+.heroBox {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 6vw;
+}
+.headerSVG {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  float: right;
+  margin-left: auto;
+  width: 30vw;
+  height: 50vh;
+  align-self: flex-end;
+}
+
+.titleName {
+  margin-bottom: 10px;
+}
+
+.heroDesc {
+  margin-bottom: 10px;
+}
+
+.exploreBTN {
+  background-color: #c57050;
+  width: 10vw;
+  height: 5vh;
+  color: white;
+  border-color: #c57050;
+  border-style: solid;
+  margin-right: 10px;
+}
+.exploreBTN:hover {
+  background-color: #d3623a;
+}
+
+.actionBTN {
+  background-color: #c56f5000;
+  color: black;
+  font-size: bold;
+  width: 10vw;
+  border-style: solid;
+  height: 5vh;
+  border-color: #c57050;
+}
+.actionBTN:hover {
+  background-color: #d3623a;
+  color: white;
+}
+
+.whatIsSection {
+  height: 60vh;
+  display: grid;
+  grid-template-rows: 20vh 40vh;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+  padding: 25px;
+}
+
+.whatIsHeader {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  color: #166756;
+  font-family: "Merriweather", serif;
+}
+
+.orangeLine {
+  background-color: #d3623a;
+  padding: 0;
+  margin: 0;
+  height: 5px;
+  width: 400px;
+  margin-top: 30px;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  color: white;
+}
+
+.countersContainer {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.userCounter {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.destinationsCounter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.whatIsPara {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  font-weight: 400;
+}
+
+.whatIsSVG {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-left: 13vw;
+}
+
+.userCount {
+  font-size: 20px;
+  font-weight: bold;
+  color: #5ddac0;
+}
+
+.desCount {
+  font-size: 20px;
+  color: #ed7f52;
+  font-weight: bold;
 }

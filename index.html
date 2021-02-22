@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet"> 
-    <title> Document </title>
-</head>
-<body> 
-    <nav> 
-        <li> 
-            <li> Home </li>
-            <li> About </li>
-            <li> Locations </li>
-            <li> Gallery </li>
-        </li>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
     <div class="header">
-        <div class="heroBox">
-            <h1> Travel Easy </h1>
-            <h3> Explore the World! </h3> 
-            <div class="headerBTNContainer">
-                <button>
-                    Explore the world!
-                </button>
-                <button>
-                    Action
-                </button>
-                <img src="assets/headerPic.svg"  alt="travelers standing below an airplane">
-
-            </div>
-            
+      <nav>
+        <ul class="navList">
+          <li>Home</li>
+          <li>About</li>
+          <li>Locations</li>
+          <li>Gallery</li>
+        </ul>
+      </nav>
+      <div class="heroBox">
+        <h1 class="titleName">Travel Easy</h1>
+        <h3 class="heroDesc">Explore the World!</h3>
+        <div class="headerBTNContainer">
+          <button class="exploreBTN">Explore</button>
+          <button class="actionBTN">Action</button>
         </div>
+      </div>
+      <img
+        class="headerSVG"
+        src="assets/headerPic.svg"
+        alt="travelers standing below an airplane"
+      />
     </div>
-      
-      
-    
-    
-</body>
-<script src="script.js"> </script>
+    <div class="whatIsSection">
+      <h2 class="whatIsHeader">What is Travel Easy?</h2>
+      <div class="orangeLine">-</div>
+      <p class="whatIsPara">
+        Are you planning a vacation or simply need an escape without the
+        headaches of planning it? Then, our services are perfect for you. Our
+        goal is to provide you with the information you need to plan an
+        enjoyable vacation, all at the click of a button. We do all the heavy
+        lifting for you. We’ve taken tons of research and analysis, then
+        summarized it into easy to digest travel information to plan out the
+        amazing trip that you so deserve.
+      </p>
+
+      <div class="countersContainer">
+        <div class="userCounter">
+          <h3>Users</h3>
+          <small class="userCount"> 230 </small>
+        </div>
+        <div class="destinationsCounter">
+          <h3>Destinations</h3>
+          <small class="desCount"> 122 </small>
+        </div>
+      </div>
+      <img class="whatIsSVG" src="assets/whatIs.svg" alt="travel picture" />
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>
