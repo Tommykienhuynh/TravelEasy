@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+}
+nav .ul {
+  list-style: none;
+}
+.header {
+  height: 50vh;
+  background: linear-gradient(#22fcd5, #94d5bb, #cbe0d2);
+}
