@@ -1,0 +1,19 @@
+.homeEnding {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .headers {
+    margin-right: 6vw;
+    margin-bottom: 11vw;
+  }
+
+  .orangeLine {
+    width: 550px;
+  }
+
+  .housePic {
+    align-self: flex-end;
+  }
+}

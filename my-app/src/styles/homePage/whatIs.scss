@@ -1,0 +1,70 @@
+.whatIsHome {
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 20vh 40vh;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+  padding: 25px;
+
+  .orangeLine {
+    /*  align-self: center; */
+  }
+
+  p {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    align-self: flex-start;
+    color: black;
+  }
+
+  .headerContainer {
+    align-self: center;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .headers {
+    align-self: end;
+  }
+}
+
+.countersContainer {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.userCounter {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.destinationsCounter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.whatIsSVG {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-left: 13vw;
+}
+
+.userCount {
+  font-size: 20px;
+  font-weight: bold;
+  color: #5ddac0;
+}
+
+.desCount {
+  font-size: 20px;
+  color: #ed7f52;
+  font-weight: bold;
+}

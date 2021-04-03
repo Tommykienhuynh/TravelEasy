@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import "./styles/App.scss";
+import Navbar from "./components/navbar/navbar";
 import whatIsSvg from "../src/assets/home/whatIs.svg";
 import headerPic from "../src/assets/home/headerPic.svg";
 import road from "./assets/home/roadPic.jpg";
@@ -8,6 +9,10 @@ import hotAirBallon from "./assets/home/hotAirBallonPic.jpg";
 import boat from "./assets/home/boatPic.jpg";
 import canyon from "./assets/home/canyonPic.jpg";
 import LaCard from "./components/Home/card";
+import logo from "./assets/General/logo.png";
+import housePic from "./assets/home/housePic.svg";
+import Footer from "./components/footer";
+import { useHistory } from "react-router-dom";
 /* import nyPic from "./assets/home/nyCard.jpg";
 import japanPic from "./assets/home/japanCard.jpg";
 import laPic from "./assets/home/laCard.jpg";
@@ -15,18 +20,25 @@ import vancouverPic from "./assets/home/vancouverCard.jpg"; */
 /* import circleBG from "./assets/home/desBG.svg"; */
 
 export default function Home() {
+  const history = useHistory();
+  const [nav, setNav] = useState(false);
+  function changeNavbar() {
+    if (window.scrollY >= 300) {
+      setNav(true);
+    } else {
+      setNav(false);
+    }
+  }
+
+  window.addEventListener("scroll", changeNavbar);
+
   return (
     <div className="homePage">
+      {/*       {nav ?   <Navbar /> : < sticky/> } */}
+      <Navbar nav={nav} />
       <section className="homeHeader">
-        <nav>
-          <ul className="navList">
-            <li>Home</li>
-            <li>About</li>
-            <li>Locations</li>
-            <li>Gallery</li>
-          </ul>
-        </nav>
         <div className="heroBox">
+          <img src={logo} className="logo" />
           <h1 className="titleName">Travel Easy</h1>
           <h3 className="heroDesc">Explore the World!</h3>
           <div className="headerBTNContainer">
@@ -41,9 +53,12 @@ export default function Home() {
         />
       </section>
       <section className="whatIsHome">
-        <h2 className="whatIsHeader">What is Travel Easy?</h2>
-        <div className="orangeLine">-</div>
-        <p className="whatIsPara">
+        <div className="headerContainer">
+          <h2 className="headers">What is Travel Easy?</h2>
+          <div className="orangeLine">-</div>
+        </div>
+
+        <p>
           Are you planning a vacation or simply need an escape without the
           headaches of planning it? Then, our services are perfect for you. Our
           goal is to provide you with the information you need to plan an
@@ -106,25 +121,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/*   <section className="homeGallery">
+      <section className="homeGallery">
         <div className="galleryBox">
-          <h2> Browse Gallery Photos </h2>
+          <h2 className="headers"> Browse Gallery Photos </h2>
           <div className="orangeLine">-</div>
-          <button> Gallery </button>
+          <p>
+            Browse through a college of photos from the destinations we cover
+          </p>
+          <button
+            onClick={() => {
+              history.push("/gallery");
+            }}
+          >
+            Gallery
+          </button>
         </div>
         <div className="galleryPics">
-          <img src={boat} />
-          <img src={canyon} />
-          <img src={road} />
-          <img src={hotAirBallon} />
+          <img className="canyonImg" src={canyon} />
+          <img className="boatImg" src={boat} />
+
+          <img className="ballonImg" src={hotAirBallon} />
+          <img className="roadImg" src={road} />
         </div>
       </section>
       <section className="homeEnding">
-        <h2>
-          Plan Vacation. Find and book hotel. Discover and confirm location!
+        <img src={housePic} className="housePic" />
+        <h2 className="headers ">
+          Plan Vacation. <br />
+          Find and book hotel. <br />
+          Discover and confirm location! <br />
           <div className="orangeLine">-</div>
         </h2>
-      </section> */}
+      </section>
+      <section className="footer">
+        <Footer />
+      </section>
     </div>
   );
 }

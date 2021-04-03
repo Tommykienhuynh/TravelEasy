@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+
+  align-items: flex-end;
+  background-color: $Main-Orange;
+  height: 30vh;
+
+  .h2 {
+  }
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  margin-left: 10px;
+  justify-self: flex-start;
+}
+
+.ul {
+  margin-right: 30px;
+}

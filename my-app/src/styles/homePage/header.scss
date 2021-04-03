@@ -1,16 +1,26 @@
 .homeHeader {
-  background: linear-gradient(
+  /* background: linear-gradient(
     -45deg,
     $Dark-green2,
     $Main-green,
-    #1cc9c0,
-    #1da56c
+    #1eb8b0,
+    #1d885b
+  ); */
+  /*  background: linear-gradient(-45deg, #80ff72, #7ee8fa, #fb7ba2, #fce043); */
+  background: linear-gradient(
+    -45deg,
+    #96e4df,
+    #4dccc6,
+    #ffac81,
+    #77eed8,
+    #96a5e6
   );
   display: grid;
   grid-template-rows: 10vh 1fr;
   grid-template-columns: 50% 50%;
   background-size: 400%, 400%;
   position: relative;
+  height: 75vh;
   animation: change 10s ease-in-out infinite;
 
   .heroBox {
@@ -20,6 +30,13 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 6vw;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+
+    width: 120px;
+    height: 120px;
   }
   .headerSVG {
     grid-row: 2/3;
@@ -41,31 +58,41 @@
     margin-bottom: 10px;
   }
 
+  .headerBTNContainer {
+    margin-bottom: 80px;
+    font-size: 120%;
+  }
+
   .exploreBTN {
-    background-color: #c57050;
-    width: 10vw;
-    height: 5vh;
+    background-color: #f5f5f56b;
+    width: 14vw;
+    height: 6vh;
     color: white;
-    border-color: #c57050;
+    font-weight: bold;
+    border-color: #f5f5f5d3;
     border-style: solid;
     margin-right: 10px;
   }
   .exploreBTN:hover {
-    background-color: #d3623a;
+    background-color: $Main-Orange;
+    border-color: $Main-Orange;
+    color: $Dark-green;
   }
 
   .actionBTN {
     background-color: #c56f5000;
-    color: black;
-    font-size: bold;
-    width: 10vw;
+    color: white;
+
+    font-weight: bold;
+    width: 14vw;
     border-style: solid;
-    height: 5vh;
-    border-color: #c57050;
+    height: 6vh;
+    border-color: white;
   }
   .actionBTN:hover {
-    background-color: #d3623a;
-    color: white;
+    background-color: $Main-Orange;
+    border-color: $Main-Orange;
+    color: $Dark-green;
   }
 
   @keyframes change {

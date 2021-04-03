@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./app";
+
 import "../src/styles/App.scss";
 
 import Home from "./Home";
@@ -7,7 +9,7 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home className="app" />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
