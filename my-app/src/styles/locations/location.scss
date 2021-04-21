@@ -1,0 +1,95 @@
+@import "../config.scss";
+
+.slider {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    position: absolute;
+    z-index: 3;
+  }
+}
+
+.caroImg {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 10px;
+}
+
+.arrowBtnContainer {
+  font-size: 30px;
+}
+
+.left-arrow {
+  background-color: green;
+  position: absolute;
+  z-index: 3;
+  user-select: none;
+  font-size: 30px;
+}
+
+.right-arrow {
+  position: absolute;
+  z-index: 3;
+  margin-left: 50px;
+  background-color: green;
+  user-select: none;
+  font-size: 30px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding: 0px 10vw;
+
+  margin-top: 120px;
+}
+
+.infoList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+
+  li {
+    margin-left: 40px;
+  }
+
+  li.active {
+    color: $Dark-green;
+    border-bottom: 2px solid $Main-Orange;
+  }
+}
+
+.locInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+
+  p {
+    font-family: "Merriweather", serif;
+    font-weight: 200;
+  }
+  font-family: "Merriweather", serif;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 40px;
+  padding: 0 12vw;
+}
+
+.singleSlide {
+  display: none;
+}
+
+.singleSlide.active {
+  display: inline;
+}

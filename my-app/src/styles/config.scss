@@ -71,3 +71,11 @@ h1 {
 .visNone {
   visibility: hidden;
 }
+
+.shadow {
+  box-shadow: 0 8px 6px -6px rgb(0, 0, 0);
+}
+
+.shadowRight {
+  box-shadow: 12px 8px 6px -6px rgb(0, 0, 0);
+}

@@ -5,7 +5,8 @@ import { useHistory } from "react-router-dom";
 
 export default function Navbar({ nav }) {
   const history = useHistory();
-  let [navActive, setNavActive] = useState("home");
+  const [dropDown, setDrop] = useState(false);
+  const [isLocation, setIsLocation] = useState(true);
   return (
     <nav className={nav ? `active` : ``}>
       <div className="logoAndTitle">
@@ -29,9 +30,36 @@ export default function Navbar({ nav }) {
         <NavLink className="nLi" exact to="/about" activeCLassName="active">
           About
         </NavLink>
-        <NavLink className="nLi" exact to="/location" activeCLassName="active">
-          Locations
-        </NavLink>
+        <span
+              className="nLi"
+              exact
+        /*       to="/location"
+              activeCLassName="active" */
+              onClick={() => setDrop(!dropDown)}
+            >
+              Locations
+            </span>
+        {dropDown && (
+          <div className="navDropDown shadow">
+            <NavLink
+              className="nLi"
+              exact
+              to="/location"
+              activeCLassName="active"
+            >
+              Japan
+            </NavLink>
+            <NavLink
+              className="nLi"
+              exact
+              to="/location/Not"
+              activeCLassName="active"
+            >
+              Locations
+            </NavLink>
+          </div>
+        )}
+
         <NavLink className="nLi" to="/gallery" activeCLassName="active">
           Gallery
         </NavLink>
