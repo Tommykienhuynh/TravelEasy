@@ -44,6 +44,11 @@ nav.active {
   color: black;
   font-size: 16px;
 }
+.nLi.isactive {
+  color: $Dark-Orange;
+  border-bottom: 2px solid $Main-Orange;
+}
+
 .nLi:after {
   color: black;
 }
@@ -79,10 +84,14 @@ li:hover {
   transform: translateX(22%);
   overflow: hidden;
   margin-top: 6px;
-  background: rgba(238, 233, 233, 0.527);
+  background: rgba(238, 233, 233, 0.822);
   border-color: rgb(77, 77, 77);
   color: black;
   border-radius: 8px;
   padding-top: 10px;
   padding-bottom: 10px;
+
+  .nLi {
+    margin-top: 3px;
+  }
 }

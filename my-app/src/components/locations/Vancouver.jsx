@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../navbar/navbar";
 import Carousel from "../locations/carosel";
-import { JapanPics } from "./unPicData";
-import axios from "axios";
+import { vancouverPics } from "./unPicData";
 import "../../styles/locations/location.scss";
 import UnsplashImg from "../Gallery/UnsplashImg";
+import axios from "axios";
 
 export default function Location() {
-  const [picData, setPicData] = useState(JapanPics);
+  const [picData, setPicData] = useState(vancouverPics);
   const [infoSlide, setSlide] = useState("Overview");
   const [images, setImages] = useState([]);
 
@@ -19,7 +19,7 @@ export default function Location() {
     axios
       .get(
         /* `${apiRoot}/photos/random?client_id=dnM7u-gLm61JlXTgdpfIiOg3ktUMsXKzrEL4ATXL1rY&count=12` */
-        `${apiRoot}/search/photos?page=1&query=japan&client_id=dnM7u-gLm61JlXTgdpfIiOg3ktUMsXKzrEL4ATXL1rY `
+        `${apiRoot}/search/photos?page=1&query=Vancouver&client_id=dnM7u-gLm61JlXTgdpfIiOg3ktUMsXKzrEL4ATXL1rY `
       )
       /*  .then((res) => console.log(res.data.results)); */
       .then((res) => setImages([...images, ...res.data.results]));
@@ -33,8 +33,9 @@ export default function Location() {
   return (
     <>
       <Navbar nav="nav" />
-      <Carousel picData={JapanPics} locName={"Japan"} />
+      <Carousel picData={vancouverPics} locName={"Vancouver"} />
 
+      <section> </section>
       <div className="infoContainer">
         <div className="infoBar">
           <ul className="infoList">
@@ -70,25 +71,26 @@ export default function Location() {
                 infoSlide === "Overview" ? "singleSlide active" : "singleSlide"
               }
             >
-              Known as the “Land of the Rising Sun”, Japan has managed to
-              maintain its heritage, culture, and traditions while adapting to
-              modern times. When you visit this beautiful country, it will be
-              obvious how important tradition remains to its people, even in the
-              most urban areas.
+              Want to get away and become more acquainted with nature while
+              still having a quick connection to the city urban life? Vancouver
+              is the place for you. All sorts of adventures await you in this
+              beautiful city. This is definitely a city where you can get back
+              to the simple things in life while enjoying mother nature.
             </p>
             <p
               className={
                 infoSlide === "tSpots" ? "singleSlide active" : "singleSlide"
               }
             >
-              Along with the beautiful culture and traditions, Japan proudly
-              presents a number of natural and historical attractions. To name a
-              few would be Mt. Fuji, Historic Kyoto, Imperial Tokyo, The Island
-              Shrine of Itsukushima, and pretty much any cherry blossom tree as
-              they bloom in March. All of these spots are sure to offer awe
-              inspiring sights that no high-definition 4K computer screen can
-              ever hold a candle to. Around town you will find architectural
-              sights such as Tokyo Tower and Tokyo Skytree.
+              Explore the 400 hectares of rainforest in Stanley Park, which is
+              nearly totally surrounded by water. Resting on the West Coast,
+              this urban park offers gorgeous views of the ocean, mountains, and
+              rainforest. The beaches in Vancouver inspire beachfront living.
+              Local beaches include English Bay Beach, Jericho Beach, Locarno
+              Beach, Second Beach, Spanish Banks Beach, Sunset Beach, Third
+              Beach, and Trout Lake Beach. With so much nature around, Vancouver
+              is the perfect place for activities such as bike riding,
+              ziplining, fishing, surfing, and wildlife viewing.
             </p>
 
             <p
@@ -97,13 +99,10 @@ export default function Location() {
               }
             >
               <br></br>
-              While in Tokyo you can visit the fashion capitals Shibuya and
-              Harajuku to do some shopping and exploring. Another great
-              attraction is Tokyo Disneyland. While Japan is a fairly small
-              country, getting around to visit all of these places has been made
-              easy by use of the Japan Rail (JR). This well operated train
-              system is punctual and covers the majority of travel from and to
-              Tokyo. For visitors, passes should be purchased in advance.
+              When you’re ready for a taste of the city life again, hop over to
+              the metro area of Vancouver that offers numerous shopping malls
+              and street vendors. Vancouver presents itself with adorable
+              boutiques and shops, sure to please any shopper.
             </p>
 
             <p
@@ -111,28 +110,27 @@ export default function Location() {
                 infoSlide === "Hotels" ? "singleSlide active" : "singleSlide"
               }
             >
-              The hotel aspect of Japan travel is slightly different from travel
-              within the US, in that the rooms are very modern but extremely
-              tiny. Japanese living is very minimalistic in a sense, and you can
-              see that in their hotel rooms. Most rooms will have flat screen
-              TV, a full or queen size bed, a small walk way around the bed and
-              a small shelf for your room card and cell phone. But don’t get it
-              wrong, the hotel rooms are quite comfortable and the staff are
-              very friendly.
+              Vancouver offers an amazing assortment of hotel and rental options
+              for its tourists and visitors. Just looking through the various
+              postings of hotel rooms boasts modern and comfortable
+              accommodations. These hotel rooms are also pretty affordable in
+              comparison to other travel destinations. An added bonus would be
+              that since Vancouver is heavily surrounded by water, it Is likely
+              that your hotel room will offer refreshingly beautiful views of
+              the West Coast.
             </p>
             <p
               className={
                 infoSlide === "Food" ? "singleSlide active" : "singleSlide"
               }
             >
-              Japanese cuisine is a huge part of their culture. They incorporate
-              their traditions in creating every dish. Sushi is prepared with
-              freshly caught fish, so fresh that the fish nearly melts in your
-              mouth in the most satisfying way. The ramen is prepared with great
-              detail, elevating every ingredient to give bursts of flavor to the
-              last drop. The pastries can pass as works of art, as they are
-              creatively and beautifully designed to please not only the pallet
-              but also the eyes.
+              Being a sea port city, Vancouver is famous for its fresh seafood
+              and sushi. In fact, Vancouver has been dubbed the “sushi capital
+              of North America”, since it was one of the first North American
+              cities to introduce sushi into the main scene. Other dishes to
+              expect in Vancouver would be infused with maple syrup. Don’t
+              forget to try the candied salmon sticks, or the Japadog stand on
+              Robson Street.
             </p>
           </div>
         </div>

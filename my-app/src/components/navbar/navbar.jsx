@@ -31,31 +31,42 @@ export default function Navbar({ nav }) {
           About
         </NavLink>
         <span
-              className="nLi"
-              exact
-        /*       to="/location"
+          className="nLi"
+          exact
+          /*       to="/location"
               activeCLassName="active" */
-              onClick={() => setDrop(!dropDown)}
-            >
-              Locations
-            </span>
+          onClick={() => setDrop(!dropDown)}
+        >
+          Locations ▼
+        </span>
         {dropDown && (
           <div className="navDropDown shadow">
-            <NavLink
-              className="nLi"
-              exact
-              to="/location"
-              activeCLassName="active"
-            >
+            <NavLink className="nLi" exact to="/japan" activeCLassName="active">
               Japan
             </NavLink>
             <NavLink
               className="nLi"
               exact
-              to="/location/Not"
+              to="newYork"
               activeCLassName="active"
             >
-              Locations
+              New York
+            </NavLink>
+            <NavLink
+              className="nLi"
+              exact
+              to="losAngeles"
+              activeCLassName="active"
+            >
+              L.A
+            </NavLink>
+            <NavLink
+              className="nLi"
+              exact
+              to="vancouver"
+              activeCLassName="active"
+            >
+              Vancouver
             </NavLink>
           </div>
         )}

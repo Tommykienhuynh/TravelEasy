@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/navbar/navbar.jsx";
 import Home from "./Home";
 import Gallery from "./components/Gallery/Gallery";
-import Locations from "./components/locations/location.jsx";
+import Japan from "./components/locations/location.jsx";
+import NewYork from "./components/locations/Ny.jsx";
+import losAngeles from "./components/locations/La.jsx";
+import Vancouver from "./components/locations/Vancouver.jsx";
 import About from "./components/about/about.jsx";
 
 function App() {
@@ -12,7 +15,10 @@ function App() {
       {/*       <Navbar /> */}
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/location" exact component={Locations} />
+        <Route path="/japan" exact component={Japan} />
+        <Route path="/newYork" exact component={NewYork} />
+        <Route path="/losAngeles" exact component={losAngeles} />
+        <Route path="/vancouver" exact component={Vancouver} />
         <Route path="/about" exact component={About} />
         <Route path="/gallery" exact component={Gallery} />
       </Switch>

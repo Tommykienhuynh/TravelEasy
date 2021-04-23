@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 
 import "../../styles/locations/location.scss";
-import {
-  FaArrowAltCircleRight,
-  FaArrowAltCircleLeft,
-  FaDivide,
-} from "react-icons/fa";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
-export default function Carosel({ picData }) {
+export default function Carosel({ picData, locName }) {
   console.log(picData);
   const [current, setCurrent] = useState(0);
   const length = picData.length;
@@ -25,10 +21,30 @@ export default function Carosel({ picData }) {
   }
   return (
     <section className="slider">
-      <h1> Japan </h1>
-      <div className="arrowBTNContainer">
-        <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-        <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      <div className="bgOverlay"></div>
+      <div className="heroBox">
+        <div className="heroText">
+          <h1> {locName} </h1>
+          <h3> View the resources for this location </h3>
+        </div>
+        <div className="miniSlide ">
+          {picData.map((pic, index) => {
+            return (
+              <img
+                className={
+                  index === current ? "miniImg shadow active" : "miniImg shadow"
+                }
+                src={pic.image}
+                key={index}
+                alt="Japan Img"
+              />
+            );
+          })}
+        </div>
+        <div className="arrowBTNContainer">
+          <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
+          <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+        </div>
       </div>
 
       {picData.map((pic, index) => {

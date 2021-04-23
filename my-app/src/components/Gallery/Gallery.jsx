@@ -13,17 +13,27 @@ import { FaImages } from "react-icons/fa";
 
 export default function Gallery() {
   const [images, setImages] = useState([]);
-  useEffect(() => {
+  const [locationName, setLocationName] = useState();
+
+  function handleChange(event) {
+    setLocationName(event.target.value);
+  }
+
+  function onSubmit(e) {
+    e.preventDefault();
+    /*  useEffect(() => { */
     const apiRoot = "https://api.unsplash.com";
     const accessKey = process.env.React_App_ACCESSKEY;
 
     axios
       .get(
-        `${apiRoot}/photos/random?client_id=dnM7u-gLm61JlXTgdpfIiOg3ktUMsXKzrEL4ATXL1rY&count=12`
+        /* `${apiRoot}/photos/random?client_id=dnM7u-gLm61JlXTgdpfIiOg3ktUMsXKzrEL4ATXL1rY&count=12` */
+        `${apiRoot}/search/photos?page=1&query=${locationName}&client_id=dnM7u-gLm61JlXTgdpfIiOg3ktUMsXKzrEL4ATXL1rY `
       )
-      /*  .then((res) => console.log(res.data)); */
-      .then((res) => setImages([...images, ...res.data]));
-  }, []);
+      /*  .then((res) => console.log(res.data.results)); */
+      .then((res) => setImages([...images, ...res.data.results]));
+    /*    }, []); */
+  }
 
   return (
     <div className="galleryPage">
@@ -39,11 +49,14 @@ export default function Gallery() {
             <div className="magGlassContainer shadowRight">
               <img src={mGlass} className="mGlass" alt="magGlass" />
             </div>
-            <input
-              type="text"
-              className="locationInput shadow"
-              placeholder="Search Location"
-            />
+            <form onSubmit={onSubmit}>
+              <input
+                type="text"
+                onChange={handleChange}
+                className="locationInput shadow"
+                placeholder="Search Location"
+              />
+            </form>
           </div>
         </div>
 
