@@ -1,0 +1,112 @@
+@import "../../styles/config.scss";
+
+.aboutHeader {
+  display: flex;
+  margin-top: 8vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 22vh;
+  background: linear-gradient(-45deg, $Main-Orange, #21d190);
+}
+
+.missionStateContainer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin-top: 30px;
+    font-size: 90%;
+    padding: 0 100px;
+    letter-spacing: 1px;
+  }
+}
+
+.profileQuoteSection {
+  display: grid;
+  margin-top: 20vh;
+  grid-template-columns: 1fr 1fr;
+
+  .mapPic {
+    grid-column: 1/2;
+    width: 100%;
+    height: 70%;
+  }
+
+  .quoteContainer {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    width: 100%;
+    height: 70%;
+    background-color: $Dark-green;
+  }
+
+  p {
+    grid-column: 2/3;
+    color: $Main-Orange;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Merriweather", serif;
+  }
+}
+
+.profileCardContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 70vh;
+
+  .profileCard {
+    width: 20vw;
+    height: 350px;
+    background-color: rgb(216, 216, 216);
+    border: 3px solid $Main-Orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  small {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+
+  .circle {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+
+    border-radius: 50%;
+    background-image: no-repeat;
+    background-size: cover;
+    background-image: url(../../assets/about/avatar_proffile.png);
+    display: inline-block;
+  }
+  p {
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
+.meetTheTeamSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutLogo {
+  width: 10%;
+  height: 10%;
+  margin-top: 50px;
+}

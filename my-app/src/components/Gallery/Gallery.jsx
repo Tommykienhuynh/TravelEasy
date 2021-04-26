@@ -21,7 +21,7 @@ export default function Gallery() {
 
   function onSubmit(e) {
     e.preventDefault();
-    /*  useEffect(() => { */
+
     const apiRoot = "https://api.unsplash.com";
     const accessKey = process.env.React_App_ACCESSKEY;
 
@@ -31,8 +31,7 @@ export default function Gallery() {
         `${apiRoot}/search/photos?page=1&query=${locationName}&client_id=dnM7u-gLm61JlXTgdpfIiOg3ktUMsXKzrEL4ATXL1rY `
       )
       /*  .then((res) => console.log(res.data.results)); */
-      .then((res) => setImages([...images, ...res.data.results]));
-    /*    }, []); */
+      .then((res) => setImages([...res.data.results]));
   }
 
   return (

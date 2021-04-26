@@ -54,6 +54,7 @@
       height: 35%;
       justify-self: flex-start;
     }
+
     .cardPic.la {
       background-image: -webkit-gradient(
           linear,
@@ -102,6 +103,10 @@
         url(../../assets/home/vancouverCard.jpg);
       background-image: linear-gradient(to right bottom, $Blend-One, $Blend-Two),
         url(../../assets/home/vancouverCard.jpg);
+    }
+    .card:hover .cardPic img {
+      background-image: red;
+      opacity: 0;
     }
 
     button {

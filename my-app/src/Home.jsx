@@ -12,7 +12,8 @@ import LaCard from "./components/Home/card";
 import logo from "./assets/General/logo.png";
 import housePic from "./assets/home/housePic.svg";
 import Footer from "./components/footer";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
+
 /* import nyPic from "./assets/home/nyCard.jpg";
 import japanPic from "./assets/home/japanCard.jpg";
 import laPic from "./assets/home/laCard.jpg";
@@ -30,6 +31,13 @@ export default function Home() {
     }
   }
 
+  function scrollDown() {
+    window.scrollTo({
+      top: 505,
+      behavior: "smooth",
+    });
+  }
+
   window.addEventListener("scroll", changeNavbar);
 
   return (
@@ -42,8 +50,13 @@ export default function Home() {
           <h1 className="titleName">Travel Easy</h1>
           <h3 className="heroDesc">Explore the World!</h3>
           <div className="headerBTNContainer">
-            <button className="exploreBTN">Explore</button>
-            <button className="actionBTN">Action</button>
+            <button className="exploreBTN" onClick={scrollDown}>
+              {" "}
+              Learn More
+            </button>
+            <Link to="/about">
+              <button className="actionBTN">About Us</button>
+            </Link>
           </div>
         </div>
         <img
@@ -97,26 +110,35 @@ export default function Home() {
         {/* <img className="circleBG" src={circleBG} /> */}
         <h1 className="desTitle"> Popular Destinations </h1>
         <div className="cardContainer">
-          {/*    <div className="card">
+          <div className="card">
             <div className="cardPic la"> </div>
             <h3 className="cardTitle"> Los Angeles </h3>
-            <button> More Info </button>
-          </div> */}
-          <LaCard />
+            <Link to="/losAngeles">
+              <button> More Info </button>
+            </Link>
+          </div>
+          {/*           <LaCard /> */}
           <div className="card ">
             <div className="cardPic ny"> </div>
             <h3 className="cardTitle"> New York </h3>
-            <button> More Info </button>
+            <Link to="/newYork">
+              <button> More Info </button>
+            </Link>
           </div>
           <div className="card ">
             <div className="cardPic japan"> </div>
             <h3 className="cardTitle"> Japan </h3>
-            <button> More Info </button>
+
+            <Link to="/japan">
+              <button> More Info </button>
+            </Link>
           </div>
           <div className="card ">
             <div className="cardPic vancouver"> </div>
             <h3 className="cardTitle"> Vancouver </h3>
-            <button> More Info </button>
+            <Link to="/vancouver">
+              <button> More Info </button>
+            </Link>
           </div>
         </div>
       </section>

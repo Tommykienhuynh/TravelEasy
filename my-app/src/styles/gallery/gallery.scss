@@ -1,7 +1,7 @@
 @import "../config.scss";
 @import "../navbar//navbar.scss";
 .galleryPage {
-  height: 2000px;
+  height: 800px;
 }
 
 .galleryHeader {
@@ -16,16 +16,20 @@
 
   h1 {
     font-weight: 400;
+    letter-spacing: 1px;
   }
 }
 
 .greenLine {
   background-color: $Dark-green;
-  height: 3px;
+  height: 4px;
   width: 500px;
 }
 
 .locationInput {
+  color: black;
+  font-weight: bold;
+  margin-top: 20px;
   height: 10vh;
   width: 35vw;
   border-top-right-radius: 16px;
@@ -36,11 +40,17 @@
   border-color: #f5f5f5d3;
   border-style: solid;
   margin-right: 10px;
-  background-color: #f5f5f56b;
-  color: white;
+  background-color: #f5f5f5;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: green;
+  font-weight: bold;
+  opacity: 1; /* Firefox */
 }
 
 .magGlassContainer {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;

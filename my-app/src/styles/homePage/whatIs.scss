@@ -34,6 +34,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
 .userCounter {
@@ -41,7 +42,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  font-weight: bold;
+  align-items: center;
 }
 
 .destinationsCounter {
@@ -49,6 +51,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  align-items: center;
+  font-weight: bold;
 }
 
 .whatIsSVG {
@@ -61,10 +65,12 @@
   font-size: 20px;
   font-weight: bold;
   color: #5ddac0;
+  margin-top: 5px;
 }
 
 .desCount {
   font-size: 20px;
   color: #ed7f52;
   font-weight: bold;
+  margin-top: 5px;
 }
